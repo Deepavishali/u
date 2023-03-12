@@ -13,8 +13,7 @@ const urlSchema = new mongoose.Schema(
         },
         visitHistory: [{ timestamp: { type: Number } }],
     },
-    {timestamps:true}
+    { timestamps: true }
 );
-export default mongoose.model("URL",urlSchema);
+export default mongoose.model("URL", urlSchema);
 
-//module.exports = URL;

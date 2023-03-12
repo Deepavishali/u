@@ -52,6 +52,3 @@ catch(err){
 }
 };
 
-// module.exports = {
-//     handleGenerateShortURL, handleGetTotalClicks
-// };
