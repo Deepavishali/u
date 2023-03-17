@@ -2,7 +2,9 @@ import express from "express";
 import mongoose from "mongoose";
 import * as dotenv from "dotenv";
 import cors from "cors";
-import {generateShortURLRoute,totalClicksRoute,originalUrlRoute} from "./routes/url.js"
+import {generateShortURLRoute,totalClicksRoute,originalUrlRoute} from "./routes/url.js";
+import{loginRoute,signupRoute,forgotPasswordRoute,passwordResetRoute} from "./routes/auth.js";
+
 
 const app = express();
 
@@ -24,6 +26,10 @@ mongoose
 app.use("/generateShortURL",generateShortURLRoute)
 app.use("/",totalClicksRoute)
 app.use("/url",originalUrlRoute)
+app.use("/login",loginRoute);
+app.use("/signup",signupRoute);
+app.use("/forgotPassword",forgotPasswordRoute);
+app.use("/passwordReset",passwordResetRoute);
 
 //Setting the port//
 app.listen(PORT,()=>console.log("Server started at the port",PORT))
