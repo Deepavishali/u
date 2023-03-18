@@ -14,7 +14,7 @@ export const generateShortURL = async (req, res) => {
     });
 
     return res.json({ id: shortID })
-}
+    }
 
 export const totalClicks = async(req, res) => {
     const shortId = req.params.shortId;
